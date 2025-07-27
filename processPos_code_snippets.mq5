@@ -1,4 +1,4 @@
-void CandlePatternReversal::processPos(ulong & posTicket) {
+void processPos(ulong & posTicket) {
      if(posTicket <= 0) return;
      if(OrderSelect(posTicket)) return;
 
