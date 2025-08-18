@@ -30,6 +30,10 @@ int OnInitEvent() {
                     Print(__FUNCTION__, " > Found pending order with ticket #", order.Ticket(), "...");
                     if(order.OrderType() == ORDER_TYPE_BUY_STOP) buyPos = order.Ticket();
                     if(order.OrderType() == ORDER_TYPE_SELL_STOP) sellPos = order.Ticket();
+
+                    // or
+                    //if(order.OrderType() == ORDER_TYPE_BUY_LIMIT) buyPos = order.Ticket();
+                    //if(order.OrderType() == ORDER_TYPE_SELL_LIMIT) sellPos = order.Ticket();
                }
           }
      }
