@@ -9,8 +9,12 @@ void OnTradeTransactionEvent(
           if(order.Select(trans.order)) {
                if(order.Magic() == Magic) {
                     if(order.OrderType() == ORDER_TYPE_BUY_STOP) {
+                    //or
+                    //if(order.OrderType() == ORDER_TYPE_BUY_LIMIT) {
                          buyPos = order.Ticket();
                     } else if(order.OrderType() == ORDER_TYPE_SELL_STOP) {
+                    //or
+                    //} else if(order.OrderType() == ORDER_TYPE_SELL_LIMIT) {
                          sellPos = order.Ticket();
                     }
                }
